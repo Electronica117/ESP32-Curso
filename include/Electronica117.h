@@ -18,22 +18,18 @@
 class Electronica117 {
 
   public:   
-
     Electronica117();
     bool initWiFi();
     void borrarRed();
-    
     void loop();
 
-  private:
-
+  protected:
     void initWiFiAP();
     static void initServer();
     static String buscarRedes();
     static void RedesRequest(AsyncWebServerRequest *request);
     static void NotFound(AsyncWebServerRequest *request);
     static void ConectarWiFi(AsyncWebServerRequest *request);   
-
     bool wifiIsConnected = false;
     long timepoDeConexion;
    
