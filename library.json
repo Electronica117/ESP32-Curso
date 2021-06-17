@@ -1,0 +1,28 @@
+{
+    "name": "Electronica117",
+    "version": "1.0.0",
+    "description": "Una biblioteca para facilitar el desarrollo en dispositivos IoT",
+    "keywords": "esp32, electronica117, iot",
+    "repository":
+    {
+      "type": "git",
+      "url": "https://github.com/Electronica117/ESP32-Curso.git"
+    },
+    "authors":
+    [
+      {
+        "name": "Edgar Domínguez",
+        "email": "ragdedominguez8669@gmail.com",
+        "url": "https://www.facebook.com/EdgarDominguez117/",
+        "maintainer": true
+      }
+    ],
+    "license": "Apache-2.0",
+    "homepage": "https://www.electronica117.com/",
+    "dependencies": {
+      "ottowinter/ESPAsyncWebServer-esphome": "^1.2.7",
+      "bblanchon/ArduinoJson": "^6.18.0"
+    },
+    "frameworks": "*",
+    "platforms": "*"
+  }
