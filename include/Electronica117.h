@@ -15,7 +15,7 @@
 #include <ESPAsyncWebServer.h>
 #include <ArduinoJson.h>
 
-class Electronica117 : public AsyncWebHandler{
+class Electronica117 {
 
   public:   
 
