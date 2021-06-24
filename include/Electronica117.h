@@ -4,9 +4,6 @@
  * 2021
  */
 
-#ifndef Electronica117_h
-#define Electronica117_h
-
 #include <Arduino.h>
 #include <WiFi.h>
 #include <SPIFFS.h>
@@ -19,6 +16,7 @@ class Electronica117 {
 
   public:   
     Electronica117();
+    void nombreDeRedAP(String nombreDeRed);
     bool initWiFi();
     void borrarRed();
     void loop();
@@ -33,9 +31,4 @@ class Electronica117 {
     bool wifiIsConnected = false;
     long timepoDeConexion;
    
-    
 };
-
-
-
-#endif

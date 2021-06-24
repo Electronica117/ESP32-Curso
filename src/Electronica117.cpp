@@ -1,3 +1,9 @@
+/**
+ * Electronica117
+ * Edgar Antonio Domínguez Ramírez
+ * 2021
+ */
+
 #include "Electronica117.h"
 
 StaticJsonDocument<1024> Redes;
@@ -7,6 +13,9 @@ String SSID="";
 String PASS="";
 Preferences preferences;
 DNSServer dnsServer;
+const char *_nombreDeRed = "MiDispositivoIoT";
+
+
 class myHandler : public AsyncWebHandler {
 public:
   myHandler() {}
@@ -22,7 +31,10 @@ public:
 };
 
 Electronica117::Electronica117(){
-  
+}
+
+void Electronica117::nombreDeRedAP(String nombreDeRed){
+  _nombreDeRed = nombreDeRed.c_str();
 }
 
 void Electronica117::loop(){
@@ -95,7 +107,7 @@ void Electronica117::borrarRed(){
 
 void Electronica117::initWiFiAP(){
   WiFi.mode(WIFI_AP);
-  while(!WiFi.softAP("Electroncia117")){
+  while(!WiFi.softAP(_nombreDeRed)){
     Serial.println(".");
     delay(100);  
   }
